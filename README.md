@@ -107,6 +107,61 @@ The notebook includes:
 - Confusion matrix  
 - Prediction samples  
 
+Here is the **clean, copy-ready README section** exactly in the structure you requested:
+
+---
+
+## 📘 TestModel.ipynb — Model Testing & Evaluation Notebook
+
+The **`TestModel.ipynb`** notebook is used to **test images**, get **predictions**, and automatically export the results to an **Excel sheet**.
+
+---
+
+### ✔️ What this notebook does
+
+* Loads your **Keras / TFLite model**
+* Reads all images from a folder (recursively)
+* Preprocesses each image to the required size (e.g., **224×224×3**)
+* Runs predictions and returns:
+
+  * predicted label
+  * confidence score
+* Calculates:
+
+  * overall accuracy
+  * per-class accuracy
+* Saves everything into:
+  **`model_test_results.xlsx`**
+
+---
+
+### 📊 Excel Output Columns
+
+| File Name  | True Label | Predicted Label | Confidence | Status  |
+| ---------- | ---------- | --------------- | ---------- | ------- |
+| image1.png | cat        | cat             | 0.98       | Correct |
+| image2.png | shoe       | sandal          | 0.65       | Wrong   |
+
+---
+
+### ▶️ How to use TestModel.ipynb
+
+1. Open the notebook
+2. Set:
+
+   * your **model path**
+   * your **test image folder** path
+3. Run all cells
+4. Check the generated file:
+
+```
+output/model_test_results.xlsx
+```
+
+---
+
+If you want, I can format this as a full GitHub README with headings, badges, tables, and proper styling.
+
 ---
 
 ## ▶️ How to Run the Project
