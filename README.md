@@ -1,38 +1,129 @@
-Fashion MNIST Classification with Keras and PyTorch
-This project demonstrates how to build, train, and evaluate Convolutional Neural Networks (CNNs) for image classification on the Fashion MNIST dataset using both Keras (TensorFlow) and PyTorch. Additionally, it includes steps for converting the trained Keras model to a TensorFlow Lite (.tflite) format for deployment on edge devices.
+# 🎽 Fashion MNIST Classification with **Keras** & **PyTorch**
 
-Project Overview
-The goal of this project is to classify 10 different categories of clothing items from the Fashion MNIST dataset. We implement two separate CNN models, one using the Keras API (backed by TensorFlow) and another using PyTorch. Both models follow a similar architectural pattern involving convolutional layers, batch normalization, max-pooling, and dense layers.
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Anaconda](https://img.shields.io/badge/Anaconda-42B029?style=for-the-badge&logo=anaconda&logoColor=white)](https://www.anaconda.com/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![ML Kit](https://img.shields.io/badge/ML%20Kit-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/ml-kit)
+[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
+[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/)
 
-Dataset
-The Fashion MNIST dataset is used, consisting of:
+---
 
-60,000 training images
-10,000 test images
-Each image is 28x28 grayscale, representing an item of clothing.
-There are 10 classes, such as T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, and Ankle boot.
-Models Implemented
-1. Keras CNN Model
-Architecture: Sequential model with Conv2D, BatchNormalization, MaxPooling2D, Flatten, Dropout, and Dense layers.
-Training: Trained for 5 epochs with Adam optimizer and categorical_crossentropy loss.
-****: Model saved in .h5 format.
-2. PyTorch CNN Model
-Architecture: Custom nn.Module with Conv2d, ReLU, BatchNorm2d, MaxPool2d, Flatten, Dropout, and Linear layers.
-Training: Trained for 5 epochs with Adam optimizer and CrossEntropyLoss.
-Output: Model state dictionary saved in .pt format.
-TensorFlow Lite Conversion
-The trained Keras model is converted into a TensorFlow Lite (.tflite) format. This format is optimized for mobile and embedded devices, offering reduced model size and lower latency inference.
+## 📌 Project Overview
 
-Results
-Both Keras and PyTorch models achieve high accuracy on the Fashion MNIST test set, demonstrating the effectiveness of CNNs for this image classification task. Training and validation loss/accuracy plots are generated for visual analysis of model performance.
+This project demonstrates how to build, train, and evaluate **Convolutional Neural Networks (CNNs)** for classifying Fashion MNIST images using:
 
-How to Run
-To reproduce the results, execute the code cells in sequential order within a Google Colab environment or a similar Python environment with TensorFlow and PyTorch installed.
+- **Keras (TensorFlow backend)**
+- **PyTorch**
 
-Dependencies
-TensorFlow
-Keras
-PyTorch
-torchvision
-NumPy
-Matplotlib
+It also includes converting the trained Keras model into a **TensorFlow Lite (.tflite)** file for deployment on edge and mobile devices.
+
+---
+
+## 👗 Dataset: Fashion MNIST
+
+The **Fashion MNIST** dataset consists of:
+
+- **60,000 training images**
+- **10,000 test images**
+- **28 × 28 grayscale images**
+- **10 clothing categories:**
+
+| Label | Class        |
+|-------|--------------|
+| 0     | T-shirt/top  |
+| 1     | Trouser      |
+| 2     | Pullover     |
+| 3     | Dress        |
+| 4     | Coat         |
+| 5     | Sandal       |
+| 6     | Shirt        |
+| 7     | Sneaker      |
+| 8     | Bag          |
+| 9     | Ankle Boot   |
+
+---
+
+## 🧠 Models Implemented
+
+### ✅ 1. Keras CNN Model (TensorFlow)
+
+**Architecture:**
+- Conv2D → BatchNorm → MaxPool  
+- Conv2D → BatchNorm → MaxPool  
+- Flatten  
+- Dense → Dropout  
+- Output Layer  
+
+**Training:**
+- **Optimizer:** Adam  
+- **Loss:** categorical_crossentropy  
+- **Epochs:** 5  
+- **Output:** `model.h5`
+
+---
+
+### ✅ 2. PyTorch CNN Model
+
+**Architecture:**
+- Conv2d → BatchNorm2d → ReLU → MaxPool2d  
+- Conv2d → BatchNorm2d → ReLU → MaxPool2d  
+- Flatten  
+- Linear → Dropout  
+- Output Layer  
+
+**Training:**
+- **Optimizer:** Adam  
+- **Loss:** CrossEntropyLoss  
+- **Epochs:** 5  
+- **Output:** `model.pt`
+
+---
+
+## 🔄 TensorFlow Lite Conversion
+
+The trained Keras model is converted to **TensorFlow Lite (.tflite)** for:
+
+- Lightweight mobile deployment  
+- Faster inference  
+- Smaller storage footprint  
+- Use in ML Kit, IoT devices, and embedded systems  
+
+---
+
+## 📊 Results & Evaluation
+
+Both models achieve **high accuracy** on the Fashion MNIST dataset.
+
+The notebook includes:
+
+- Training accuracy & loss curves  
+- Validation performance graphs  
+- Confusion matrix  
+- Prediction samples  
+
+---
+
+## ▶️ How to Run the Project
+
+Run in **Google Colab**, **Jupyter Notebook**, or **local Python environment**.
+
+👤 Author
+
+Created & Maintained by Vineesh Kumar
+
+📧 You can modify the contact section as needed.
+
+📜 License
+
+This project is Completely Free to Use
+✔ No restrictions
+✔ Open for learning, modification, and distribution
+✔ Attribution appreciated but not required
+
+License: Free / Open Use
